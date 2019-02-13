@@ -21,7 +21,14 @@ public class Bitstamp implements XChange {
 	
 	@Override
 	public boolean hasSymbol(CurrencyPair pair) {
-		return exchange.getExchangeSymbols().contains(pair);
+		boolean check = exchange.getExchangeSymbols().contains(pair);
+		
+		if( check )
+			log.info(getExchangeName() + " has the pair " + pair);
+		else {
+			log.warn(getExchangeName() + " does not have the pair " + pair);
+		}
+		return check;
 	}
 
 	@Override
