@@ -1,14 +1,14 @@
 package com.cryppro.orderbookarbitrage.xchange.utils;
 
+import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.knowm.xchange.currency.CurrencyPair;
 import org.knowm.xchange.dto.trade.LimitOrder;
 
+import com.cryppro.orderbookarbitrage.gcp.pubsub.PLCheck;
 import com.cryppro.orderbookarbitrage.xchange.AdjustedBidAsk;
-import com.cryppro.orderbookarbitrage.xchange.PLCheck;
-import com.cryppro.orderbookarbitrage.xchange.PLResults;
 import com.cryppro.orderbookarbitrage.xchange.XChangeOrderBook;
 
 public class CrypproUtils {
@@ -71,22 +71,23 @@ public class CrypproUtils {
 
 		return adjustedBidAsk;
 	}
-	// bid from what you sell, ask from what you buy, divide by each other, then -1
-	public static PLResults calcPL(List<AdjustedBidAsk> orders) {
+
+	public static List<PLCheck> calcPL(List<AdjustedBidAsk> orders, CurrencyPair pair, double size, Instant timestamp) {
 		
-		PLResults results = new PLResults();
-		
-    	for( AdjustedBidAsk buy : orders) {
+		List<PLCheck> ret = new ArrayList<>();
+		for( AdjustedBidAsk buy : orders) {
     		for( AdjustedBidAsk sell : orders) {
     			PLCheck plCheck = new PLCheck();
+    			plCheck.setTimestamp(timestamp);
     			plCheck.setBuyExchange(buy.getExchange());
     			plCheck.setSellExchange(sell.getExchange());
     			plCheck.setPl(buy.getExchange().equals(sell.getExchange()) ? 0. : (sell.getFeeAdjBid() / buy.getFeeAdjAsk()) - 1);
-    			
-    			results.getPlChecks().add(plCheck);
+    			plCheck.setPair(pair);
+    			plCheck.setSize(size);
+    			ret.add(plCheck);
     		}
     	}
-
-		return results;
+		
+		return ret;
 	}
 }

@@ -1,5 +1,6 @@
 package com.cryppro.orderbookarbitrage.rest;
 
+import java.time.Instant;
 import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
@@ -7,6 +8,8 @@ import java.util.stream.Collectors;
 import org.knowm.xchange.currency.CurrencyPair;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.gcp.pubsub.core.PubSubTemplate;
+import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.format.annotation.DateTimeFormat.ISO;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -43,7 +46,16 @@ public class ApplicationController {
     			.map(orderbook -> CrypproUtils.adjustedBidAsk(orderbook, pair, size, fee))
     			.collect(Collectors.toList());
     	
-    	this.pubSubTemplate.publish(googleConfig.getPubSubTopic(), CrypproUtils.calcPL(orders));
-        
+    	CrypproUtils.calcPL(orders, pair, size, Instant.now())
+    	.forEach(result -> this.pubSubTemplate.publish(googleConfig.getPubSubTopic(), result));
+    	
     }
+    
+    @RequestMapping("/summary")
+    public void summary(@RequestParam(value="timestamp") @DateTimeFormat(iso=ISO.DATE_TIME) Instant timestamp,
+    		@RequestParam(value="pair") CurrencyPair pair,
+    		@RequestParam(value="size") double size) {
+    	
+    }
+    
 }
