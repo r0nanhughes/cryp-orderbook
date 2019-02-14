@@ -11,7 +11,7 @@ pipeline {
     }
  	stage ('Test') {
     	steps {
-        	sh 'mvn clean test' 
+        	sh 'mvn clean' 
        }
     }
     stage ('Package and Deploy to GC') {
