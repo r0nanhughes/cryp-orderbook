@@ -147,7 +147,7 @@
 				    <port>8181</port>
          			<address>0.0.0.0</address>
 					<version>1</version>
-					<cloudSdkPath>/google/google-cloud-sdk</cloudSdkPath>
+					<cloudSdkPath>/google/google-cloud-sdk/</cloudSdkPath>
 				</configuration>
 			</plugin>
 			<plugin>
