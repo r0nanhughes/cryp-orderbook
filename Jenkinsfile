@@ -14,6 +14,11 @@ pipeline {
         	sh 'mvn clean test' 
        }
     }
+    stage ('GC Authorize') {
+    	steps {
+        	sh 'gcloud auth login' 
+       }
+    }
     stage ('Deploy to GC') {
     	steps {
         	sh 'mvn appengine:deploy' 
