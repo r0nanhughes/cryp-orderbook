@@ -1,4 +1,4 @@
-package com.cryppro.orderbookarbitrage.config;
+package com.cryppro.cryporderbook.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;

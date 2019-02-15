@@ -1,4 +1,4 @@
-package com.cryppro.orderbookarbitrage.gcp.pubsub;
+package com.cryppro.cryporderbook.gcp.pubsub;
 
 import java.time.Instant;
 

@@ -1,4 +1,4 @@
-package com.cryppro.orderbookarbitrage.xchange.exchanges;
+package com.cryppro.cryporderbook.xchange.exchanges;
 
 import org.knowm.xchange.Exchange;
 import org.knowm.xchange.ExchangeFactory;
@@ -6,8 +6,8 @@ import org.knowm.xchange.currency.CurrencyPair;
 import org.knowm.xchange.huobi.HuobiExchange;
 import org.springframework.stereotype.Component;
 
-import com.cryppro.orderbookarbitrage.xchange.XChange;
-import com.cryppro.orderbookarbitrage.xchange.XChangeOrderBook;
+import com.cryppro.cryporderbook.xchange.XChange;
+import com.cryppro.cryporderbook.xchange.XChangeOrderBook;
 
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;

@@ -1,4 +1,4 @@
-package com.cryppro.orderbookarbitrage.xchange;
+package com.cryppro.cryporderbook.xchange;
 
 import org.knowm.xchange.dto.marketdata.OrderBook;
 

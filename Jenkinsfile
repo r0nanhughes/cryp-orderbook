@@ -11,10 +11,10 @@ pipeline {
     }
  	stage ('Test') {
     	steps {
-        	sh 'mvn clean' 
+        	sh 'mvn clean test' 
        }
     }
-    stage ('Package and Deploy to GC') {
+    stage ('Deploy to GC') {
     	steps {
         	sh 'mvn appengine:deploy' 
        }

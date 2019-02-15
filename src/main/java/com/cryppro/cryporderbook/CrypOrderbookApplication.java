@@ -1,4 +1,4 @@
-package com.cryppro.orderbookarbitrage;
+package com.cryppro.cryporderbook;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -8,10 +8,10 @@ import org.springframework.context.annotation.Bean;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 @SpringBootApplication
-public class OrderbookArbitrageApplication {
+public class CrypOrderbookApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(OrderbookArbitrageApplication.class, args);
+		SpringApplication.run(CrypOrderbookApplication.class, args);
 	}
 	
 	@Bean

@@ -1,4 +1,4 @@
-package com.cryppro.orderbookarbitrage.rest;
+package com.cryppro.cryporderbook.rest;
 
 import java.time.Instant;
 import java.util.List;
@@ -12,10 +12,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.cryppro.orderbookarbitrage.config.GoogleConfiguration;
-import com.cryppro.orderbookarbitrage.xchange.AdjustedBidAsk;
-import com.cryppro.orderbookarbitrage.xchange.ExchangeInitializer;
-import com.cryppro.orderbookarbitrage.xchange.utils.CrypproUtils;
+import com.cryppro.cryporderbook.config.GoogleConfiguration;
+import com.cryppro.cryporderbook.xchange.AdjustedBidAsk;
+import com.cryppro.cryporderbook.xchange.ExchangeInitializer;
+import com.cryppro.cryporderbook.xchange.utils.CrypproUtils;
 
 @RestController
 public class ApplicationController {

@@ -1,4 +1,4 @@
-package com.cryppro.orderbookarbitrage;
+package com.cryppro.cryporderbook;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
@@ -7,7 +7,7 @@ public class ServletInitializer extends SpringBootServletInitializer {
 
 	@Override
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-		return application.sources(OrderbookArbitrageApplication.class);
+		return application.sources(CrypOrderbookApplication.class);
 	}
 
 }

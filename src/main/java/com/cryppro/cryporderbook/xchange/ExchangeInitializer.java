@@ -1,4 +1,4 @@
-package com.cryppro.orderbookarbitrage.xchange;
+package com.cryppro.cryporderbook.xchange;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,15 +8,15 @@ import javax.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.cryppro.orderbookarbitrage.xchange.exchanges.Binance;
-import com.cryppro.orderbookarbitrage.xchange.exchanges.BitFinex;
-import com.cryppro.orderbookarbitrage.xchange.exchanges.Bitstamp;
-import com.cryppro.orderbookarbitrage.xchange.exchanges.Bittrex;
-import com.cryppro.orderbookarbitrage.xchange.exchanges.Cexio;
-import com.cryppro.orderbookarbitrage.xchange.exchanges.Gemini;
-import com.cryppro.orderbookarbitrage.xchange.exchanges.Huobi;
-import com.cryppro.orderbookarbitrage.xchange.exchanges.Kraken;
-import com.cryppro.orderbookarbitrage.xchange.exchanges.Poloniex;
+import com.cryppro.cryporderbook.xchange.exchanges.Binance;
+import com.cryppro.cryporderbook.xchange.exchanges.BitFinex;
+import com.cryppro.cryporderbook.xchange.exchanges.Bitstamp;
+import com.cryppro.cryporderbook.xchange.exchanges.Bittrex;
+import com.cryppro.cryporderbook.xchange.exchanges.Cexio;
+import com.cryppro.cryporderbook.xchange.exchanges.Gemini;
+import com.cryppro.cryporderbook.xchange.exchanges.Huobi;
+import com.cryppro.cryporderbook.xchange.exchanges.Kraken;
+import com.cryppro.cryporderbook.xchange.exchanges.Poloniex;
 
 import lombok.Data;
 

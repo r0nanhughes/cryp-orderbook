@@ -1,13 +1,13 @@
-package com.cryppro.orderbookarbitrage.xchange.exchanges;
+package com.cryppro.cryporderbook.xchange.exchanges;
 
 import org.knowm.xchange.Exchange;
 import org.knowm.xchange.ExchangeFactory;
-import org.knowm.xchange.bittrex.BittrexExchange;
+import org.knowm.xchange.binance.BinanceExchange;
 import org.knowm.xchange.currency.CurrencyPair;
 import org.springframework.stereotype.Component;
 
-import com.cryppro.orderbookarbitrage.xchange.XChange;
-import com.cryppro.orderbookarbitrage.xchange.XChangeOrderBook;
+import com.cryppro.cryporderbook.xchange.XChange;
+import com.cryppro.cryporderbook.xchange.XChangeOrderBook;
 
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
@@ -15,10 +15,10 @@ import lombok.extern.slf4j.Slf4j;
 @Component
 @Data
 @Slf4j
-public class Bittrex implements XChange{
+public class Binance implements XChange{
 
-	private final Exchange exchange = ExchangeFactory.INSTANCE.createExchange(BittrexExchange.class.getName());
-
+	private final Exchange exchange = ExchangeFactory.INSTANCE.createExchange(BinanceExchange.class.getName());
+	
 	@Override
 	public boolean hasSymbol(CurrencyPair pair) {
 		boolean check = exchange.getExchangeSymbols().contains(pair);

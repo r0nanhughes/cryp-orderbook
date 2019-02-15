@@ -1,4 +1,4 @@
-package com.cryppro.orderbookarbitrage;
+package com.cryppro.cryporderbook;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class OrderbookArbitrageApplicationTests {
+public class CrypOrderbookApplicationTests {
 
 	@Test
 	public void contextLoads() {

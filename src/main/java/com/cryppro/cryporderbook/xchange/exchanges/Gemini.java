@@ -1,13 +1,13 @@
-package com.cryppro.orderbookarbitrage.xchange.exchanges;
+package com.cryppro.cryporderbook.xchange.exchanges;
 
 import org.knowm.xchange.Exchange;
 import org.knowm.xchange.ExchangeFactory;
 import org.knowm.xchange.currency.CurrencyPair;
-import org.knowm.xchange.kraken.KrakenExchange;
+import org.knowm.xchange.gemini.v1.GeminiExchange;
 import org.springframework.stereotype.Component;
 
-import com.cryppro.orderbookarbitrage.xchange.XChange;
-import com.cryppro.orderbookarbitrage.xchange.XChangeOrderBook;
+import com.cryppro.cryporderbook.xchange.XChange;
+import com.cryppro.cryporderbook.xchange.XChangeOrderBook;
 
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
@@ -15,9 +15,9 @@ import lombok.extern.slf4j.Slf4j;
 @Component
 @Data
 @Slf4j
-public class Kraken implements XChange {
+public class Gemini implements XChange {
 
-	private final Exchange exchange = ExchangeFactory.INSTANCE.createExchange(KrakenExchange.class.getName());
+	private final Exchange exchange = ExchangeFactory.INSTANCE.createExchange(GeminiExchange.class.getName());
 
 	@Override
 	public boolean hasSymbol(CurrencyPair pair) {

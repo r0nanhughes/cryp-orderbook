@@ -1,4 +1,4 @@
-package com.cryppro.orderbookarbitrage.xchange.utils;
+package com.cryppro.cryporderbook.xchange.utils;
 
 import java.time.Instant;
 import java.util.ArrayList;
@@ -7,9 +7,9 @@ import java.util.List;
 import org.knowm.xchange.currency.CurrencyPair;
 import org.knowm.xchange.dto.trade.LimitOrder;
 
-import com.cryppro.orderbookarbitrage.gcp.pubsub.PLCheck;
-import com.cryppro.orderbookarbitrage.xchange.AdjustedBidAsk;
-import com.cryppro.orderbookarbitrage.xchange.XChangeOrderBook;
+import com.cryppro.cryporderbook.gcp.pubsub.PLCheck;
+import com.cryppro.cryporderbook.xchange.AdjustedBidAsk;
+import com.cryppro.cryporderbook.xchange.XChangeOrderBook;
 
 public class CrypproUtils {
 
