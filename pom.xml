@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.cryppro</groupId>
-	<artifactId>orderbook-arbitrage</artifactId>
+	<artifactId>cryp-orderbook</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>orderbook-arbitrage</name>
-	<description>Orderbook Arbitrage</description>
+	<name>cryp-orderbook</name>
+	<description>Cryp Orderbook</description>
 	<packaging>war</packaging>
 		
 	<properties>
