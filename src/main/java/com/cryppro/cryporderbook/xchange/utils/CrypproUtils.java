@@ -62,7 +62,7 @@ public class CrypproUtils {
 		adjustedBidAsk.setBid(cumulativeBid);
 		adjustedBidAsk.setFee(fee);
 		adjustedBidAsk.setFeeAdjBid(cumulativeBid - (cumulativeBid * fee));
-		adjustedBidAsk.setFeeAdjAsk(cumulativeBid + (cumulativeAsk * fee));
+		adjustedBidAsk.setFeeAdjAsk(cumulativeAsk + (cumulativeAsk * fee));
 		adjustedBidAsk.setSize(size);
 		adjustedBidAsk.setExchange(orderbook.getExchangeName());
 		adjustedBidAsk.setPair(pair);
